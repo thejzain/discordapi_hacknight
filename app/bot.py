@@ -10,7 +10,7 @@ class MoviesBot:
         self.__token = token
         self.__movies_provider = movies_provider
         self.__subtitles_provider = subtitles_provider
-        self.__client = discord.Client()
+        self.__client = discord.Client(intents=discord.Intents.default())
 
         @self.__client.event
         async def on_ready(): await self.handle_ready()
